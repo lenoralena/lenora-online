@@ -1,10 +1,11 @@
 {
-  "name": "Lena Leitenstorfer",
+  "name": "lenora-online",
   "version": "1.0.0",
   "description": "Resume",
   "main": "app.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+  "scripts":
+  {
+  "start": "node app.js"
   },
   "repository": {
     "type": "git",
