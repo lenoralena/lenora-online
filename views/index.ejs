@@ -1,0 +1,50 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8">
+    <title>Hire me :)</title>
+    <link rel="stylesheet/less" type="text/css" href="/normalize.css" />
+    <link rel="stylesheet/less" type="text/css" href="/style.less" />
+    <script src="//cdnjs.cloudflare.com/ajax/libs/less.js/3.9.0/less.min.js" ></script>
+</head>
+<body>
+  <div class="wrapper">
+    <header>
+  		<h1>
+  		  Hi Magicseaweed! I'm Lena.
+  		</h1>
+    </header>
+    <section class="intro">
+  		<img src="img.png" />
+  		<h2>Frontend Developer - UI/UX Designer</h2>
+  		<div class="line"></div>
+  		<p>
+  		  28 y/o, raised in Germany, based in England. Addicted to surfing and coding.</br>
+
+  		</p>
+  		<p>This is a forecast of my favourite wave. Implemented by me, powered by you.</p>
+      <div class="forecast">
+  		  <%- include('forecast'); -%>
+      </div>
+    </section>
+    <div class="space"></div>
+    <section class="profile bg">
+  		<%- include('skills'); -%>
+    </section>
+    <div class="space"></div>
+    <section>
+      <%- include('career'); -%>
+    </section>
+    <section class="bg-dark">
+        <h3>Contact</h3>
+        <div class="col_1_1_1">
+          <p></p>
+        </div>
+    </section>
+    <footer>
+      handcoded by me
+    </footer>
+  </div>
+</body>
