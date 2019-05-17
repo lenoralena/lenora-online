@@ -1,9 +1,10 @@
-@import url('https://fonts.googleapis.com/css?family=Montserrat|Source+Sans+Pro:200,400');
+@import url('https://fonts.googleapis.com/css?family=Muli');
+
 @color: #28BE8A;
 
 html {
   scroll-behavior: smooth;
-  font-family: 'Montserrat';
+  font-family: 'Muli';
   color: #222;
   letter-spacing: 1px;
   font-size: 16px;
@@ -32,6 +33,16 @@ h3 {
   font-size: 1.3rem;
 }
 
+a {
+  color: inherit;
+  text-decoration: none;
+  cursor:pointer;
+  &:hover {opacity: 0.6;}
+  span {
+    padding-right:5px;
+  }
+}
+
 ul {
   color:#555;
   list-style-type: none;
@@ -48,7 +59,6 @@ ul {
 p {
   margin: 2rem;
   text-align: center;
-  font-weight: 600;
   line-height: 1.6rem;
 }
 
@@ -117,19 +127,25 @@ header {
   }
 }
 
-.career dl {
-  text-align: right;
-
-  dt {
-    margin: 0;
-    font-weight: 600;
-    font-size: 0.75rem;
+.career {
+  li {
+      list-style-type: circle;
   }
+  dl {
+    text-align: right;
 
-  dd {
-    opacity: 0.6;
-    font-size: 0.6rem;
-    margin-top: 0.5rem;
+    dt {
+      margin: 0;
+      font-weight: 600;
+      font-size: 0.75rem;
+    }
+
+    dd {
+      opacity: 0.6;
+      font-size: 0.6rem;
+      margin-top: 0.5rem;
+      margin-left: 0;
+    }
   }
 }
 
@@ -137,7 +153,8 @@ footer {
     background: #555;
     color: #F2F2F2;
     font-size: 1.2rem;
-    padding:2rem;}
+    padding:2rem;
+    text-align:center;}
 
 /** Forecast **/
 .forecast {
@@ -215,13 +232,14 @@ footer {
         border-bottom: 1px solid rgba(0,0,0,0.2);
         margin: 0;
         padding: 0 0 0.5rem 0;
+        overflow: hidden;
         span {float:right}
     }
 
     dl {
       font-size: 0.875rem;
-      margin: 0;
       line-height: 1.4rem;
+      margin:0;
 
         dt{
           font-weight: 600;
@@ -232,6 +250,7 @@ footer {
         dd {
           margin: 0;
           overflow: hidden;
+          margin: 0.5rem 0
         }
     }
   }
@@ -265,9 +284,28 @@ footer {
   display: block;
 }
 
+/*MEDIA QUERIES*/
+@media (max-width: 700px) {
+  .grid {
+    grid-template-columns: 1fr !important;
+  }
+  .forecast {
+    margin-bottom: 160px;
+    .info {
+      bottom: -160px;
 
+      dl dt {
+        float:left;
+        margin-right: 2.5rem;
+      }
+    }
+  }
+  .career dl {
+    text-align: left;
+  }
+}
 
-/*MAGICSEAWEED ARROWS CSS*/
+/*MAGICSEAWEED ARROWS*/
 .msw-swa, .msw-ssa {
       display:            block;
       float:              left;
