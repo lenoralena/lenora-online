@@ -1,34 +1,36 @@
 <% forecast.forEach(function(forecast) { %>
+<div class="bar_container">
   <div class="bar" style="height:<%= forecast.height %>%">
-    <div class="info">
-      <h6><%= forecast.timestamp %><span class="text-right"> Raglan, New Zealand</span></h6>
-      <div class="grid col_1_1_1">
-        <dl>
-           <dt>Swell </dt>
-           <dd>
-            <span class="msw-swa msw-swa-<%= forecast.direction %>"></span>
-             <%= forecast.wave %>
-           </dd>
-        </dl>
-    	  <dl>
-           <dt>Wind </dt>
-           <dd>
-             <span class="msw-ssa msw-ssa-<%= forecast.windDirection %>"></span>
-             <%= forecast.wind %>
-           </dd>
-        </dl>
-        <dl class="rating">
-          <dt>Rating</dt>
-          <dd>
-            <% for(var i=0; i < forecast.rating; i++) { %>
-        		  <span></span>
-        		<% } %>
-            <% for(var i=0; i < forecast.fdrating; i++) { %>
-        		  <span class="faded"></span>
-        		<% } %>
-          </dd>
-        </dl>
-      </div>
+  </div>
+  <div class="info">
+    <h6><%= forecast.timestamp %><span class="text-right"> Raglan, New Zealand</span></h6>
+    <div class="grid col_1_1_1">
+      <dl>
+         <dt>Swell </dt>
+         <dd>
+          <span class="msw-swa msw-swa-<%= forecast.direction %>"></span>
+           <%= forecast.wave %>
+         </dd>
+      </dl>
+  	  <dl>
+         <dt>Wind </dt>
+         <dd>
+           <span class="msw-ssa msw-ssa-<%= forecast.windDirection %>"></span>
+           <%= forecast.wind %>
+         </dd>
+      </dl>
+      <dl class="rating">
+        <dt>Rating</dt>
+        <dd>
+          <% for(var i=0; i < forecast.rating; i++) { %>
+      		  <span></span>
+      		<% } %>
+          <% for(var i=0; i < forecast.fdrating; i++) { %>
+      		  <span class="faded"></span>
+      		<% } %>
+        </dd>
+      </dl>
     </div>
   </div>
+</div>
 <% }) %>
