@@ -1,10 +1,10 @@
-@import url('https://fonts.googleapis.com/css?family=Muli');
+@import url('https://fonts.googleapis.com/css?family=Open+Sans|Ubuntu');
 
 @color: #28BE8A;
 
 html {
   scroll-behavior: smooth;
-  font-family: 'Muli';
+  font-family: 'Open Sans';
   color: #222;
   letter-spacing: 1px;
   font-size: 16px;
@@ -18,6 +18,7 @@ h1, h2, h3, h4, h5, h6 {
 h1 {
   margin: 0;
   padding: 7rem 0 11rem;
+  font-family: 'Ubuntu';
 }
 
 h2 {
@@ -25,12 +26,14 @@ h2 {
   font-size: 1.1rem;
   margin:3rem;
   text-transform: uppercase;
+  font-family: 'Ubuntu';
 }
 
 h3 {
   margin-bottom: 0.875rem;
   margin-top: 3rem;
   font-size: 1.3rem;
+  font-family: Ubuntu;
 }
 
 a {
@@ -47,7 +50,7 @@ ul {
   color:#555;
   list-style-type: none;
   text-align: left;
-  margin: 1rem 3rem;
+  margin: 1rem 2rem;
   padding: 0;
 
   li {
@@ -72,7 +75,7 @@ p {
 }
 
 section {
-  padding: 1rem;
+  padding: 2rem 1rem;
   display: -ms-grid;
   display: grid;
   justify-items: center;
@@ -96,11 +99,19 @@ header {
     position: absolute;
     top: 50%;
     left: 50%;
-    min-width: 24rem;
+    min-width: 20rem;
     transform: translate(-50%, -50%);
     color: #FFF;
   }
 }
+
+footer {
+    background: #222;
+    color: #F2F2F2;
+    font-size: 1.2rem;
+    padding:2rem;
+    text-align:center;
+  }
 
 .intro img {
   border: 4px solid #FFFFFF;
@@ -108,12 +119,11 @@ header {
   height: 180px;
   width: 180px;
   display: block;
-  margin: -90px auto 1rem;
+  margin: -110px auto 1rem;
   z-index: 1;
 }
 
 .profile {
-
   h6 {
     font-weight: 600;
     margin-bottom: 0.1rem;
@@ -149,12 +159,6 @@ header {
   }
 }
 
-footer {
-    background: #555;
-    color: #F2F2F2;
-    font-size: 1.2rem;
-    padding:2rem;
-    text-align:center;}
 
 /** Forecast **/
 .forecast {
@@ -221,15 +225,6 @@ footer {
     left:0;
     z-index: 1;
 
-      .rating span {
-        &.faded {
-          opacity: 0.4;}
-        &:before {
-          content: "\2605";
-          font-size: 18px;
-        }
-      }
-
       h6 {
           font-size: 0.875rem;
           text-transform: uppercase;
@@ -283,6 +278,8 @@ footer {
 .text-left {text-align:left;}
 .text-right {text-align:right;}
 .text-center {text-align:center;}
+.text-light {font-weight:300;}
+.text-bold {font-weight:600;}
 
 .space {
   width:100%;
@@ -297,12 +294,13 @@ footer {
   }
   .forecast {
     margin-bottom: 160px;
+
     .info {
       bottom: -160px !important;
 
       dl dt {
         float:left;
-        margin-right: 2.5rem;
+        margin-right: 2.5rem !important;
       }
     }
   }
